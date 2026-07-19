@@ -33,30 +33,66 @@ The table is useful when first learning these conversions. With practice, howeve
 | E | 1110 |
 | F | 1111 |
 
+*Table 1. Hexadecimal-to-binary conversion table.*
+
 ### Part A
 
 To convert the hexadecimal number `0x25B9D2` to binary, first remember that the leading `0x` is simply an indicator that the number is written in hexadecimal notation. Then convert each hexadecimal digit individually by looking up its corresponding binary representation in the conversion table above.
 
 | Hexadecimal | Binary |
-| :---------: | :----: |
+| :---: | :---: |
 | 2 | 0010 |
 | 5 | 0101 |
-| B | 1101 |
+| B | 1011 |
 | 9 | 1001 |
 | D | 1101 |
 | 2 | 0010 |
 
 Concatenating the binary values gives
 
-`001001011101100111010010`
+```text
+0010 0101 1011 1001 1101 0010
+```
 
 Therefore,
 
-`0x25B9D2 = 0010 0101 1101 1001 1101 0010`
+```text
+0x25B9D2 = 0010 0101 1011 1001 1101 0010
+```
+
+### Part B
+
+To convert binary `1010111001001001` to hexadecimal, first split the number into groups of four bits starting from the right.
+
+```text
+1010 1110 0100 1001
+```
+
+Then replace each four-bit group with the corresponding hexadecimal digit using the Table 1 conversion table above.
+
+| Binary | Hexadecimal |
+| :---: | :---: |
+| 1010 | A |
+| 1110 | E |
+| 0100 | 4 |
+| 1001 | 9 |
+
+Concatenating the hexadecimal digits gives
+
+```text
+0xAE49
+```
+
+Therefore,
+
+```text
+1010 1110 0100 1001 = 0xAE49
+```
 
 ## Answer
 
-A. `0x25B9D2 = 0010 0101 1101 1001 1101 0010`
+A. `0x25B9D2 = 0010 0101 1011 1001 1101 0010`  
+B. `1010 1110 0100 1001 = 0xAE49`  
 
 ## References
 
